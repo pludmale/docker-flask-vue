@@ -1,9 +1,19 @@
 version: '3'
 services:
- web:
+ api:
    build: src
    ports:
-     - ${PORT}:${PORT}
+     - ${API_PORT}:${API_PORT}
    volumes:
      - .:/code
    command: flask run --host=${HOST} --port=${PORT}
+
+ front:
+   build: front
+   volumes:
+     - ./front:/front
+     - /front/node_modules
+   ports:
+     - 8080:8080
+   depends_on:
+     - api
