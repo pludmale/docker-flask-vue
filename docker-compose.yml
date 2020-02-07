@@ -1,0 +1,9 @@
+version: '3'
+services:
+ web:
+   build: src
+   ports:
+     - ${PORT}:${PORT}
+   volumes:
+     - .:/code
+   command: flask run --host=${HOST} --port=${PORT}
