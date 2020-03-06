@@ -10,7 +10,9 @@
     "moment": "^2.24.0",
     "vue": "^2.6.11",
     "vue-router": "^3.1.5",
-    "vuex": "^2.4.1"
+    "vuex": "^2.4.1",
+    "@vue/cli-service": "^4.2.0",
+    "vue-template-compiler": "^2.6.11"
   },
   "browser": {
     "vue": "vue/dist/vue.common.js"
