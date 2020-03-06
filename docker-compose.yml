@@ -15,6 +15,7 @@ services:
      - /front/node_modules
    environment:
      - FRONT_HOST=${FRONT_HOST}
+     - NODE_ENV=${NODE_ENV}
    ports:
      - 8080:8080
    depends_on:
